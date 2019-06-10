@@ -1,3 +1,25 @@
-{% extends "base.html"%} {% block conteudo %}
-    <h1>medico</h1>
+{% extends 'base.html' %}
+{% block conteudo %}
+<table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>CRM</th>
+                <th>Especialidade</th>
+                <th>Idade</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for medico in medicos %}
+                <tr>
+                    <td>{{medico.id}}</td>
+                    <td>{{medico.nome}}</td>
+                    <td>{{medico.espcialidade}}</td>
+                    <td>{{medico.idade}}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <p>Foram cadastrados {{medicos | length }} medicos</p>
 {% endblock %}
