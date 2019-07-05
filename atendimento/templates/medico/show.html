@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block conteudo %}
+<h1>Detalhes do Medico</h1>
+<div>
+    <label>Nome:</label>
+    {{medico.nome}}
+</div>
+<div>
+    <label>CRM:</label>
+    {{medico.crm}}
+</div>
+<div>
+    <label>Especialidade:</label>
+    {{medico.especialidade}}
+</div>
+<div>
+    <label>Idade:</label>
+    {{medico.idade}}
+</div>
+{% endblock %}
